@@ -34,7 +34,7 @@ GameBuddy is a sleek and responsive **React-based** front-end project where game
   Browse thousands of games with smooth and snappy page transitions.
 
 - 🛡️ **Authentication (Clerk)**  
-  Login/Sign-up functionality to manage favorites *(coming soon!)*
+  Login/Sign-up functionality to manage favorites 
 
 ---
 
