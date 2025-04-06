@@ -1,0 +1,246 @@
+.sidebar {
+  width: 16rem;
+  background-color: #0b1e2d;
+  color: white;
+  padding: 1rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #00bfff;
+  letter-spacing: 0.03em;
+  margin-bottom: 1rem;
+}
+
+.sidebar-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Genre Section */
+.genre-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.genre-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  background-color: transparent;
+}
+
+.genre-row:hover {
+  background-color: #11304d;
+}
+
+.genre-row.selected {
+  background-color: #00bfff;
+  color: #0b1e2d;
+}
+
+.genre-icon-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.genre-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Sidebar Sections */
+.sidebar-section {
+  background-color: #102735;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.sidebar-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #102735;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.sidebar-section-header:hover {
+  background-color: #163e53;
+}
+
+.sidebar-section-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sidebar-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.sidebar-section-icon {
+  transition: transform 0.3s ease;
+  color: #a8c6d4;
+}
+
+.sidebar-section-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.sidebar-section-content {
+  padding: 0.75rem 1rem;
+  background-color: #0e2433;
+  border-top: 1px solid #1b3b4c;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Checkbox & Radio */
+.checkbox-group,
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkbox-label,
+.radio-label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.checkbox-label:hover,
+.radio-label:hover {
+  color: #00bfff;
+}
+
+.checkbox-input,
+.radio-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-custom,
+.radio-custom {
+  position: absolute;
+  left: 0;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: #1b3b4c;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.radio-custom {
+  border-radius: 50%;
+}
+
+.checkbox-label:hover .checkbox-custom,
+.radio-label:hover .radio-custom {
+  background-color: #295e7a;
+}
+
+.checkbox-input:checked ~ .checkbox-custom,
+.radio-input:checked ~ .radio-custom {
+  background-color: #00bfff;
+}
+
+.checkbox-custom:after,
+.radio-custom:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-input:checked ~ .checkbox-custom:after,
+.radio-input:checked ~ .radio-custom:after {
+  display: block;
+}
+
+/* Checkmark styles */
+.checkbox-label .checkbox-custom:after {
+  left: 0.45rem;
+  top: 0.25rem;
+  width: 0.35rem;
+  height: 0.7rem;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.radio-label .radio-custom:after {
+  top: 0.375rem;
+  left: 0.375rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: white;
+}
+
+/* Clear Filters Button */
+.clear-filters-btn {
+  margin-top: auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #102735;
+  color: #00bfff;
+  border: 1px solid #1b3b4c;
+  transition: all 0.3s ease;
+}
+
+.clear-filters-btn:hover {
+  background-color: #163e53;
+  border-color: #00bfff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    position: sticky;
+    top: 0;
+  }
+}
