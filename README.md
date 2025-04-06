@@ -48,9 +48,9 @@ GameBuddy is a sleek and responsive **React-based** front-end project where game
 
 ---
 
-## 📸 Screenshots
+Live preview: https://67f28ee9d6f65192795b6d3a--sunny-banoffee-cfc6aa.netlify.app
 
-![GameBuddy Screenshot](./path-to-your-image.png)
+
 
 ---
 
