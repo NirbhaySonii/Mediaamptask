@@ -64,7 +64,7 @@ This project was inspired by modern game libraries and anime like **Solo Levelin
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/GameBuddy.git
+git clone https://github.com/NirbhaySonii/GameBuddy.git
 
 # Navigate into the project folder
 cd GameBuddy
